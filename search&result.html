@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Search Results | Sindh Agriculture University Grading System</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#1B4332", // Forest Green
+                        "primary-container": "#2D6A4F",
+                        "on-primary": "#FFFFFF",
+                        "secondary": "#D4AF37", // Gold
+                        "secondary-container": "#F4EBD0",
+                        "on-secondary": "#1B4332",
+                        "tertiary": "#40916C",
+                        "background": "#F8F9FA",
+                        "surface": "#FFFFFF",
+                        "outline": "#74777f",
+                        "surface-variant": "#E8ECE9",
+                        "on-surface-variant": "#404944",
+                        "surface-container": "#F0F4F2",
+                        "surface-container-highest": "#DDE5E0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.375rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "container-max": "1280px",
+                        "xl": "32px",
+                        "sm": "8px",
+                        "gutter": "24px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "display-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "title-lg": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .grade-badge { background-color: #D4AF37; color: #1B4332; font-weight: 700; }
+        .transition-all-custom { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .hero-gradient { background: linear-gradient(135deg, #1B4332 0%, #2D6A4F 100%); }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen pb-16 md:pb-0">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-40 bg-white border-b border-surface-container-highest shadow-sm">
+<div class="max-w-container-max mx-auto px-lg py-md flex items-center justify-between">
+<div class="flex items-center gap-md">
+<img alt="SAU Logo" class="w-12 h-12 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzGxKM1SUPom-XXkvMAnxg8tat3jA_JZvHtMKSyWjNYRf-dUTE9biD8E1uQqRO9K7PAgY3e8E5EiuvhCw0bXapW9eZOdlMDB-oOjlZiod6gyQ7TJzEoASJ_FpEHqK5Tm7XEvmUiv1nEkVBjWFGmmrC6Bm2n4IWHNzbp74_BgsyWEoODyXKoqfYPIj0cMxje7DpxNHW0S-EfSUAdb2e8c_164Ayjc8ip-oWzhsrK1z-YhBKZqHmXA5xxCkzg5od2BECSR9fVLic9Q"/>
+<div class="flex flex-col">
+<h1 class="font-display-lg text-title-lg md:text-headline-sm text-primary leading-tight">Sindh Agriculture University</h1>
+<p class="text-xs font-label-md text-secondary tracking-widest uppercase ">Grading System</p>
+</div>
+</div>
+<div class="hidden md:flex gap-lg items-center">
+<nav class="flex gap-md">
+<a class="font-label-md text-on-surface-variant hover:text-primary px-3 py-2 rounded transition-colors" href="index.html">
+    <span class="material-symbols-outlined text-sm">arrow_back</span> Back to Dashboard
+</a>
+<a class="font-label-md text-primary border-b-2 border-secondary px-3 py-2" href="#">Results</a>
+<a class="font-label-md text-on-surface-variant hover:text-primary px-3 py-2 rounded transition-colors" href="#">Certificates</a>
+</nav>
+<div class="h-8 w-px bg-surface-container-highest"></div>
+<div class="flex items-center gap-sm cursor-pointer group">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center border border-outline-variant group-hover:border-primary transition-all">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="person">person</span>
+</div>
+<div class="hidden lg:block text-right">
+<p class="text-xs font-bold text-primary">Admin Portal</p>
+<p class="text-[10px] text-on-surface-variant">Logout</p>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-lg py-xl flex flex-col lg:flex-row gap-lg">
+<!-- Search Filters Sidebar -->
+<aside class="w-full lg:w-80 flex-shrink-0">
+<div class="bg-white border border-surface-container-highest rounded-xl p-lg shadow-sm sticky top-24">
+<div class="flex items-center gap-sm mb-lg">
+<span class="material-symbols-outlined text-secondary" data-icon="filter_list">filter_list</span>
+<h2 class="font-title-lg text-title-lg text-primary">Search Filters</h2>
+</div>
+<div class="space-y-md">
+<div>
+<label class="block font-label-md text-on-surface-variant mb-xs">Faculty / Department</label>
+<select class="w-full bg-surface-container border border-outline-variant rounded-lg p-md text-body-md focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none" id="dept-filter">
+<option value="all">All Faculties</option>
+<option value="agri">Faculty of Agriculture</option>
+<option value="ae">Agricultural Engineering</option>
+<option value="ah">Animal Husbandry &amp; Veterinary</option>
+<option value="ss">Social Sciences</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-on-surface-variant mb-xs">Academic Session</label>
+<select class="w-full bg-surface-container border border-outline-variant rounded-lg p-md text-body-md focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" id="batch-filter">
+<option value="">Select Session</option>
+<option value="2023">2023-24</option>
+<option value="2022">2022-23</option>
+<option value="2021">2021-22</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-on-surface-variant mb-xs">Student ID / Roll No.</label>
+<div class="relative">
+<input class="w-full bg-surface-container border border-outline-variant rounded-lg p-md pl-10 text-body-md focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" id="roll-filter" placeholder="e.g., 2K23-AG-42" type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="search">search</span>
+</div>
+</div>
+<div class="pt-md space-y-sm">
+<button class="w-full bg-primary text-on-primary font-title-lg py-md rounded-lg shadow-sm hover:bg-primary-container active:scale-[0.98] transition-all-custom flex items-center justify-center gap-sm" onclick="handleSearch()">
+<span class="material-symbols-outlined" data-icon="manage_search">manage_search</span>
+                        Search Record
+                    </button>
+<button class="w-full border border-outline-variant text-on-surface font-label-md py-md rounded-lg hover:bg-surface-container transition-all" onclick="resetFilters()">
+                        Reset All
+                    </button>
+</div>
+</div>
+<div class="mt-xl p-md bg-secondary-container/50 border border-secondary/20 rounded-lg">
+<p class="text-xs text-primary/70 leading-relaxed italic">
+                    * Results displayed are for informational purposes. For official transcripts, contact the Registrar's Office.
+                </p>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<section class="flex-grow">
+<!-- Results Container -->
+<div class="space-y-lg" id="results-view">
+<div class="flex items-center justify-between mb-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Academic Record</h3>
+<p class="text-on-surface-variant font-body-md" id="result-count">Found 1 record for current criteria</p>
+</div>
+<div class="flex gap-sm">
+<button class="p-2 bg-primary text-white rounded-lg shadow-sm" title="Card View">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+</button>
+<button class="p-2 hover:bg-surface-container-highest rounded-lg border border-outline-variant text-on-surface-variant" title="Table View">
+<span class="material-symbols-outlined" data-icon="view_list">view_list</span>
+</button>
+</div>
+</div>
+<!-- Student Record Card -->
+<div class="bg-white border border-surface-container-highest rounded-xl overflow-hidden shadow-md transition-all-custom hover:shadow-lg animate-fade-in" id="student-result-card">
+<div class="hero-gradient p-lg text-on-primary">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-lg">
+<div class="flex items-center gap-md">
+<div class="w-20 h-20 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border-2 border-white/30 overflow-hidden">
+<span class="material-symbols-outlined text-4xl" data-icon="account_circle">account_circle</span>
+</div>
+<div>
+<p class="font-label-md opacity-80 uppercase tracking-widest text-[10px] mb-1">Authenticated Student Record</p>
+<h2 class="font-headline-md text-headline-md">Jonathan Harker</h2>
+<div class="flex flex-wrap gap-x-md gap-y-1 mt-1 opacity-90 text-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="id_card">id_card</span> 2K23-AG-042</span>
+<span class="opacity-40">|</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span> Batch 2023-24</span>
+<span class="opacity-40">|</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="account_balance">account_balance</span> Faculty of Agriculture</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-md bg-black/10 backdrop-blur-md p-md rounded-xl border border-white/10 w-full md:w-auto">
+<div class="text-center px-4">
+<p class="font-label-md opacity-70 text-[10px]">Total CGPA</p>
+<p class="font-display-lg text-secondary">3.92<span class="text-body-md opacity-60">/4.0</span></p>
+</div>
+<div class="w-px h-12 bg-white/20"></div>
+<div class="text-center bg-secondary text-primary px-6 py-3 rounded-lg shadow-inner">
+<p class="font-label-md opacity-60 text-[10px] uppercase">Final Grade</p>
+<p class="font-display-lg text-display-lg leading-none">A+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="p-lg">
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-lg">
+<!-- Subject Matrix -->
+<div class="xl:col-span-2">
+<div class="flex items-center justify-between mb-md">
+<h4 class="font-title-lg text-primary flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="fact_check">fact_check</span>
+                                    Semester Performance Breakdown
+                                </h4>
+<span class="text-xs font-label-md text-on-surface-variant bg-surface-container px-2 py-1 rounded">Semester II</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
+<!-- Subject 1 -->
+<div class="bg-surface-container/30 p-md rounded-xl border border-surface-container-highest hover:border-primary/30 transition-all group">
+<div class="flex justify-between items-start mb-sm">
+<div>
+<p class="font-label-md text-on-surface-variant text-[10px] uppercase">AG-401</p>
+<p class="font-title-lg text-primary leading-tight">Soil Science &amp; Chemistry</p>
+</div>
+<span class="grade-badge px-2 py-1 rounded text-xs">A+</span>
+</div>
+<div class="flex items-end justify-between">
+<div class="flex-grow mr-md">
+<div class="flex justify-between text-[10px] mb-1 font-bold">
+<span class="text-primary">92%</span>
+<span class="text-on-surface-variant">GPA: 4.0</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full group-hover:bg-primary-container transition-all" style="width: 92%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Subject 2 -->
+<div class="bg-surface-container/30 p-md rounded-xl border border-surface-container-highest hover:border-primary/30 transition-all group">
+<div class="flex justify-between items-start mb-sm">
+<div>
+<p class="font-label-md text-on-surface-variant text-[10px] uppercase">AG-403</p>
+<p class="font-title-lg text-primary leading-tight">Crop Physiology</p>
+</div>
+<span class="grade-badge px-2 py-1 rounded text-xs">A</span>
+</div>
+<div class="flex items-end justify-between">
+<div class="flex-grow mr-md">
+<div class="flex justify-between text-[10px] mb-1 font-bold">
+<span class="text-primary">88%</span>
+<span class="text-on-surface-variant">GPA: 3.8</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full group-hover:bg-primary-container transition-all" style="width: 88%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Subject 3 -->
+<div class="bg-surface-container/30 p-md rounded-xl border border-surface-container-highest hover:border-primary/30 transition-all group">
+<div class="flex justify-between items-start mb-sm">
+<div>
+<p class="font-label-md text-on-surface-variant text-[10px] uppercase">CS-405</p>
+<p class="font-title-lg text-primary leading-tight">ICT in Agriculture</p>
+</div>
+<span class="grade-badge px-2 py-1 rounded text-xs">A+</span>
+</div>
+<div class="flex items-end justify-between">
+<div class="flex-grow mr-md">
+<div class="flex justify-between text-[10px] mb-1 font-bold">
+<span class="text-primary">95%</span>
+<span class="text-on-surface-variant">GPA: 4.0</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full group-hover:bg-primary-container transition-all" style="width: 95%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Subject 4 -->
+<div class="bg-surface-container/30 p-md rounded-xl border border-surface-container-highest hover:border-primary/30 transition-all group">
+<div class="flex justify-between items-start mb-sm">
+<div>
+<p class="font-label-md text-on-surface-variant text-[10px] uppercase">ENG-407</p>
+<p class="font-title-lg text-primary leading-tight">Technical Writing</p>
+</div>
+<span class="bg-surface-container-highest text-on-surface-variant px-2 py-1 rounded text-xs font-bold">B+</span>
+</div>
+<div class="flex items-end justify-between">
+<div class="flex-grow mr-md">
+<div class="flex justify-between text-[10px] mb-1 font-bold">
+<span class="text-primary">82%</span>
+<span class="text-on-surface-variant">GPA: 3.3</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all" style="width: 82%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Actions Sidebar -->
+<div class="xl:col-span-1 bg-surface-container/20 rounded-xl p-lg border border-surface-container-highest h-full">
+<h4 class="font-title-lg text-primary mb-md">Record Management</h4>
+<div class="space-y-sm">
+<button class="w-full flex items-center justify-between p-md bg-white hover:bg-surface-container-highest transition-all rounded-lg border border-outline-variant group">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary" data-icon="picture_as_pdf">picture_as_pdf</span>
+<span class="font-label-md">Download Marksheet</span>
+</div>
+<span class="material-symbols-outlined text-xs opacity-0 group-hover:opacity-100" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-md bg-white hover:bg-surface-container-highest transition-all rounded-lg border border-outline-variant group">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary" data-icon="history_edu">history_edu</span>
+<span class="font-label-md">Provisional Certificate</span>
+</div>
+<span class="material-symbols-outlined text-xs opacity-0 group-hover:opacity-100" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-md bg-white hover:bg-surface-container-highest transition-all rounded-lg border border-outline-variant group">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary" data-icon="share">share</span>
+<span class="font-label-md">Share Transcript</span>
+</div>
+<span class="material-symbols-outlined text-xs opacity-0 group-hover:opacity-100" data-icon="chevron_right">chevron_right</span>
+</button>
+<div class="pt-lg">
+<button class="w-full flex items-center justify-center gap-md p-md bg-red-50 text-red-700 hover:bg-red-100 transition-all rounded-lg text-body-md font-bold border border-red-200" onclick="confirmDelete()">
+<span class="material-symbols-outlined" data-icon="delete_forever">delete_forever</span>
+                                        Revoke Record
+                                    </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Info -->
+<div class="bg-surface-container border-t border-surface-container-highest p-md flex flex-wrap justify-between items-center gap-md">
+<div class="flex items-center gap-md text-[10px] text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="verified_user">verified_user</span> Digital Signature Valid</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span> Last Sync: Today, 10:45 AM</span>
+</div>
+<div class="flex gap-sm">
+<span class="px-2 py-1 bg-white rounded border border-outline-variant text-[10px] font-bold">QR VERIFIED</span>
+<span class="px-2 py-1 bg-white rounded border border-outline-variant text-[10px] font-bold">CONTROLLER APPROVED</span>
+</div>
+</div>
+</div>
+<!-- Not Found State -->
+<div class="hidden flex flex-col items-center justify-center py-xl px-lg bg-white border-2 border-surface-container-highest border-dashed rounded-xl text-center" id="not-found-view">
+<div class="w-32 h-32 mb-lg bg-surface-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-on-surface-variant opacity-20" data-icon="person_search">person_search</span>
+</div>
+<h3 class="font-headline-md text-primary">No Record Matches</h3>
+<p class="font-body-lg text-on-surface-variant max-w-md mt-sm">
+                    We couldn't find an academic record matching the roll number or criteria. Please double-check the student ID format (e.g., 2K23-AG-042) and try again.
+                </p>
+<button class="mt-lg px-xl py-md bg-primary text-on-primary rounded-lg font-title-lg hover:shadow-lg transition-all active:scale-95" onclick="resetFilters()">
+                    Clear and Retry
+                </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Nav for Mobile Only -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-white shadow-[0_-4px_10px_rgba(0,0,0,0.05)] border-t border-surface-container-highest h-16 flex justify-around items-center">
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-[10px]">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary" href="#">
+<div class="bg-secondary-container rounded-full p-1 mb-1">
+<span class="material-symbols-outlined" data-icon="search_check">search_check</span>
+</div>
+<span class="font-label-md text-[10px] font-bold">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-label-md text-[10px]">Transcripts</span>
+</a>
+</nav>
+<!-- Custom Success Toast -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 translate-y-32 transition-all duration-300 opacity-0 bg-primary text-white px-lg py-md rounded-xl shadow-2xl flex items-center gap-md z-[100]" id="delete-toast">
+<span class="material-symbols-outlined" data-icon="task_alt">task_alt</span>
+<span class="font-body-md">Record has been successfully revoked.</span>
+</div>
+<!-- <script>
+    function handleSearch() {
+        const rollInput = document.getElementById('roll-filter').value;
+        const resultCard = document.getElementById('student-result-card');
+        const notFoundView = document.getElementById('not-found-view');
+        const resultCount = document.getElementById('result-count');
+
+        if (rollInput.toLowerCase().includes('empty') || rollInput === '000' || rollInput === '') {
+            resultCard.classList.add('hidden');
+            notFoundView.classList.remove('hidden');
+            resultCount.innerText = 'No records found for current criteria';
+        } else {
+            resultCard.classList.remove('hidden');
+            notFoundView.classList.add('hidden');
+            resultCount.innerText = 'Found 1 record for current criteria';
+        }
+    }
+
+    function resetFilters() {
+        document.getElementById('roll-filter').value = '';
+        document.getElementById('batch-filter').selectedIndex = 0;
+        document.getElementById('dept-filter').selectedIndex = 0;
+        handleSearch();
+    }
+
+    function confirmDelete() {
+        if (confirm('CRITICAL: Are you sure you want to revoke this student record? This will permanently remove the digital signature and mark the record as invalid in the public ledger.')) {
+            const resultCard = document.getElementById('student-result-card');
+            const toast = document.getElementById('delete-toast');
+            
+            resultCard.classList.add('opacity-0', 'scale-95');
+            
+            setTimeout(() => {
+                resultCard.classList.add('hidden');
+                document.getElementById('not-found-view').classList.remove('hidden');
+                document.getElementById('result-count').innerText = 'No records found (Revoked)';
+                
+                toast.classList.remove('translate-y-32', 'opacity-0');
+                setTimeout(() => {
+                    toast.classList.add('translate-y-32', 'opacity-0');
+                }, 3000);
+            }, 300);
+        }
+    }
+</script> -->
+<script>
+    function handleSearch() {
+        const rollInput = document.getElementById('roll-filter').value.trim();
+        const resultCard = document.getElementById('student-result-card');
+        const notFoundView = document.getElementById('not-found-view');
+        const resultCount = document.getElementById('result-count');
+
+        // 1. LocalStorage se save kiya hua correct data read karna
+        let ledgerDatabase = JSON.parse(localStorage.getItem('sauCentralLedger')) || [];
+
+        // Agar input khali hai, to not found dikhayein
+        if (rollInput === '') {
+            resultCard.classList.add('hidden');
+            notFoundView.classList.remove('hidden');
+            resultCount.innerText = 'No records found for current criteria';
+            return;
+        }
+
+        // 2. Roll Number ke mutabik student ko dhoondna (case-insensitive)
+        const student = ledgerDatabase.find(item => item.rollNo.trim().toLowerCase() === rollInput.toLowerCase());
+
+        if (student) {
+            // Agar student mil gaya, to card show karein aur not found ko chhupayein
+            resultCard.classList.remove('hidden');
+            resultCard.classList.remove('opacity-0', 'scale-95'); // Reset any potential hidden classes
+            notFoundView.classList.add('hidden');
+            resultCount.innerText = 'Found 1 record for current criteria';
+
+            // 3. Card ke andar ka data dynamic badalna
+            // Name update karna
+            const nameElement = resultCard.querySelector('h2.font-headline-md');
+            if (nameElement) nameElement.innerText = student.name;
+
+            // Roll No, Semester aur Faculty ke text ko dhoond kar update karna
+            const infoSpans = resultCard.querySelectorAll('.flex.flex-wrap.gap-x-md span, .flex.flex-wrap.gap-x-md div p, .flex.flex-wrap.gap-x-md > span');
+            
+            // Behtareen tareeqe se elements ko target karne ke liye direct select karte hain:
+            const containerInfo = resultCard.querySelector('.flex.flex-wrap.gap-x-md');
+            if (containerInfo) {
+                // Aapke input form (addrecord.html) ke variables ke mutabik mapped semantic data
+                let facultyFullName = student.faculty;
+                if(student.faculty === "AGRI") facultyFullName = "Faculty of Agriculture";
+                else if(student.faculty === "AENG") facultyFullName = "Agricultural Engineering";
+                else if(student.faculty === "ITC") facultyFullName = "Information Technology (ITC)";
+
+                containerInfo.innerHTML = `
+                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="id_card">id_card</span> ${student.rollNo}</span>
+                    <span class="opacity-40">|</span>
+                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span> Semester: ${student.semester || 'N/A'}</span>
+                    <span class="opacity-40">|</span>
+                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="account_balance">account_balance</span> ${facultyFullName}</span>
+                `;
+            }
+
+            // 4. GPA aur Percentage dynamically calculate aur display karna
+            // Aapki addrecord file me fields key 'gpa' aur 'percentage' ke naam se save ho rahi hain
+            let studentGpa = parseFloat(student.gpa) || 0.0;
+            let studentPercentage = parseFloat(student.percentage) || 0;
+            
+            // Agar grade form se save nahi hua to percentage se auto-calculate karein
+            let studentGrade = student.grade || "F";
+            if (!student.grade) {
+                if (studentPercentage >= 80) studentGrade = "A+";
+                else if (studentPercentage >= 70) studentGrade = "A";
+                else if (studentPercentage >= 60) studentGrade = "B";
+                else if (studentPercentage >= 50) studentGrade = "C";
+                else if (studentPercentage >= 40) studentGrade = "D";
+            }
+
+            const gpaElement = resultCard.querySelector('.font-display-lg.text-secondary');
+            if (gpaElement) gpaElement.innerHTML = `${studentGpa.toFixed(2)}<span class="text-body-md opacity-60">/4.0</span>`;
+
+            const gradeElement = resultCard.querySelector('.text-center.bg-secondary .font-display-lg');
+            if (gradeElement) gradeElement.innerText = studentGrade;
+
+            // 5. Subjects ka dynamic breakdown section handler
+            const subjectContainer = resultCard.querySelector('.grid.grid-cols-1.sm\\:grid-cols-2');
+            if (subjectContainer) {
+                let badgeStyle = "background-color: #D4AF37; color: #1B4332; font-weight: 700;";
+                if(studentGrade === "F") badgeStyle = "background-color: #fee2e2; color: #991b1b; font-weight: 700;";
+
+                // Form submission ke mutabik dynamic subject code aur marks handling
+                let subjectLabel = student.subject || "OVERALL-101";
+                
+                subjectContainer.innerHTML = `
+                    <div class="bg-surface-container/30 p-md rounded-xl border border-surface-container-highest hover:border-primary/30 transition-all group sm:col-span-2">
+                        <div class="flex justify-between items-start mb-sm">
+                            <div>
+                                <p class="font-label-md text-on-surface-variant text-[10px] uppercase">Selected Subject</p>
+                                <p class="font-title-lg text-primary leading-tight">${subjectLabel}</p>
+                            </div>
+                            <span class="px-2 py-1 rounded text-xs" style="${badgeStyle}">${studentGrade}</span>
+                        </div>
+                        <div class="flex items-end justify-between">
+                            <div class="flex-grow mr-md">
+                                <div class="flex justify-between text-[10px] mb-1 font-bold">
+                                    <span class="text-primary">${studentPercentage}% Cumulative Score</span>
+                                    <span class="text-on-surface-variant">GPA: ${studentGpa.toFixed(2)}</span>
+                                </div>
+                                <div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+                                    <div class="bg-primary h-full rounded-full group-hover:bg-primary-container transition-all" style="width: ${studentPercentage}%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+        } else {
+            // Agar Roll Number database mein nahi mila to card chhupa kar "Not Found" message dikhayein
+            resultCard.classList.add('hidden');
+            notFoundView.classList.remove('hidden');
+            resultCount.innerText = 'No records found for current criteria';
+        }
+    }
+
+    function resetFilters() {
+        document.getElementById('roll-filter').value = '';
+        document.getElementById('batch-filter').selectedIndex = 0;
+        document.getElementById('dept-filter').selectedIndex = 0;
+        handleSearch();
+    }
+
+    function confirmDelete() {
+        if (confirm('CRITICAL: Are you sure you want to revoke this student record? This will permanently remove the record from the public ledger.')) {
+            const rollInput = document.getElementById('roll-filter').value.trim();
+            let ledgerDatabase = JSON.parse(localStorage.getItem('sauCentralLedger')) || [];
+            
+            // Database se record delete karna
+            ledgerDatabase = ledgerDatabase.filter(item => item.rollNo.toLowerCase() !== rollInput.toLowerCase());
+            localStorage.setItem('sauCentralLedger', JSON.stringify(ledgerDatabase));
+
+            const resultCard = document.getElementById('student-result-card');
+            const toast = document.getElementById('delete-toast');
+            
+            resultCard.classList.add('opacity-0', 'scale-95');
+            
+            setTimeout(() => {
+                resultCard.classList.add('hidden');
+                document.getElementById('not-found-view').classList.remove('hidden');
+                document.getElementById('result-count').innerText = 'No records found (Revoked)';
+                
+                toast.classList.remove('translate-y-32', 'opacity-0');
+                setTimeout(() => {
+                    toast.classList.add('translate-y-32', 'opacity-0');
+                }, 3000);
+            }, 300);
+        }
+    }
+</script>
+</body></html>
